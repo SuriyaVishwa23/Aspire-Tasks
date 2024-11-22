@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div><app-header></app-header></div>
+        <div class="waveheader">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#273036"
+                    fill-opacity="1"
+                    d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,197.3C960,203,1056,181,1152,176C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+                ></path>
+            </svg>
+            <h1>Hair Care</h1>
+            <br />
+            <p>The road to good-looking hair!!</p>
+            <img src="assets/img/haircare.jpg" />
+        </div>
+
+        <section class="content">
+            <div>
+                <h1>EXPERT ADVICE THAT WORKS!</h1>
+                <p>
+                    Consult our experts or take the self assessment to get a
+                    personalized solution
+                </p>
+            </div>
+        </section>
+
+        <section class="consult">
+            <div class="box-container">
+                <div class="box">
+                    <img src="assets/img/DOC1.jpg" width="200" alt="" />
+                    <a class="btn" (click)="goToAppointment()"
+                        >Consult Expert ><span
+                            class="fas fa-chevron-right"
+                        ></span
+                    ></a>
+                </div>
+
+                <div class="box">
+                    <img src="assets/img/selfassess.jpg" width="200" alt="" />
+                    <a class="btn"
+                        >Assess Myself<span class="fas fa-chevron-right"></span
+                    ></a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="stepperheading">
+                <h1>Good hair health is as easy as:</h1>
+            </div>
+            <div class="stepper">
+                <div class="step">
+                    <img src="assets/img/DOCTOR8.jpg" alt="Step 1" />
+                    <hr class="new4" />
+                </div>
+                <div class="step">
+                    <img src="assets/img/hairproducts.jpg" alt="Step 2" />
+                    <hr class="new4" />
+                </div>
+
+                <div class="step3">
+                    <img src="assets/img/haircare.jpg" alt="Step 3" />
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="step1details">
+                <h1>
+                    Consult doctors or explore<br />
+                    expert-developed solutions
+                </h1>
+            </div>
+            <div class="step2details">
+                <h1>
+                    Follow your personalized plans<br />
+                    recommended by experts
+                </h1>
+            </div>
+            <div class="step3details">
+                <h1>
+                    Our dedicated solutions help<br />
+                    you stay consistent
+                </h1>
+            </div>
+        </section>
+
+        <section>
+            <div class="cardheading">
+                <h1>SOLUTIONS FOR YOU.</h1>
+                <span>Your hair journey starts here.</span>
+            </div>
+            <div class="card">
+                <img
+                    src="assets/img/haircare.jpg"
+                    style="width: 200px; height: 200px"
+                />
+                <div class="container">
+                    <h4><b>John Doe</b></h4>
+                    <p>Architect & Engineer</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

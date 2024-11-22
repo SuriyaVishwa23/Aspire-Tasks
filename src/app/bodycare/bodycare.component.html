@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div><app-header></app-header></div>
+
+        <div class="waveheader">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#189AB4"
+                    fill-opacity="1"
+                    d="M0,160L48,181.3C96,203,192,245,288,240C384,235,480,181,576,170.7C672,160,768,192,864,197.3C960,203,1056,181,1152,176C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+                ></path>
+            </svg>
+            <h1>Body Care</h1>
+            <br />
+            <p>Just for the health of it!!!</p>
+            <img src="assets/img/bodycare.jpg" />
+        </div>
+
+        <section class="content">
+            <div>
+                <h1>EXPERT ADVICE THAT WORKS!</h1>
+                <p>
+                    Consult our experts or take the self assessment to get a
+                    personalized solution
+                </p>
+            </div>
+        </section>
+
+        <section class="consult">
+            <div class="box-container">
+                <div class="box">
+                    <img src="assets/img/DOC1.jpg" width="200" alt="" />
+                    <a
+                        class="btn"
+                        [routerLink]="['/nutrition']"
+                        [routerLinkActive]="'active'"
+                    >
+                        Consult Expert<span class="fas fa-chevron-right"></span>
+                    </a>
+                    <button class="btn" (click)="navigateToLogin()">
+                        Consult Expert<span class="fas fa-chevron-right"></span>
+                    </button>
+                </div>
+
+                <div class="box">
+                    <img src="assets/img/selfassess.jpg" width="200" alt="" />
+                    <a class="btn"
+                        >Assess Myself<span class="fas fa-chevron-right"></span
+                    ></a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

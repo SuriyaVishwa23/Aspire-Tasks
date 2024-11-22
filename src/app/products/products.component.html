@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div><app-header></app-header></div>
+
+    <div *ngIf="discountedProducts.length > 0">
+      <h2 class="discounted-product-title">Discounted Products</h2>
+      <div
+        class="discounted-product-section"
+        [ngClass]="{ invisible: saleEnded }"
+      >
+        <div
+          class="discounted-product-container"
+          *ngFor="let product of discountedProducts"
+        >
+          <img
+            class="discounted-product-image"
+            [src]="product.bigdealproductImage"
+            alt="Product Image"
+          />
+          <div class="discounted-product-details">
+            <h3 class="discounted-product-name">
+              {{ product.bigdealproductname }}
+            </h3>
+            <p class="discounted-product-description">
+              {{ product.bigdealproductDescription }}
+            </p>
+            <div class="discounted-product-price">
+              <span class="original-price"
+                >Original Price:
+                {{ product.bigdealproductPrice | currency : "INR" }}</span
+              >
+              <span class="discounted-price"
+                >Discounted Price:
+                {{ product.discountedPrice | currency : "INR" }}</span
+              >
+            </div>
+            <div class="sale-countdown">
+              Sale Ends In: {{ getFormattedTime(product.remainingTime) }}
+            </div>
+            <button class="add-to-cart-button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- products.component.html -->
+
+    <div class="product-list">
+      <div *ngFor="let product of products" class="product-card">
+        <img
+          [src]="product.productImage"
+          alt="Product Image"
+          class="product-image"
+        />
+        <h3 class="product-title">{{ product.productname }}</h3>
+        <div class="product-rating">
+          <span class="star" *ngFor="let star of getStars(product.rating)"
+            >&#9733;</span
+          >
+        </div>
+        <p class="product-description">{{ product.productDescription }}</p>
+        <div class="product-pricing">
+          <span class="product-price"
+            >Price: {{ product.productPrice }}<br
+          /></span>
+          <span class="product-discounted-price"
+            >Discounted Price: {{ product.discountedPrice }}</span
+          >
+          <button class="add-to-cart-button" (click)="addToCart(product)">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <img class="wave" src="assets/img/wave (2).png" />
+        <div class="example-button-row">
+            <a mat-fab extended color="warn" routerLink="/home">
+                <mat-icon>home</mat-icon>
+                Home
+            </a>
+        </div>
+        <div class="container">
+            <div class="img">
+                <img src="assets/img/NEW.png" />
+            </div>
+            <div class="login-container">
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                    <img class="logo" src="assets/img/KRIPS hOSPITAL (1).png" />
+                    <h2>WELCOME</h2>
+
+                    <div class="formGroup">
+                        <div class="example-container">
+                            <i class="fas fa-envelope"></i>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter your email</mat-label>
+                                <input
+                                    matInput
+                                    placeholder="pat@example.com"
+                                    formControlName="email"
+                                    required
+                                />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div
+                        *ngIf="
+                            loginForm.controls['email'].invalid &&
+                            loginForm.controls['email'].touched
+                        "
+                    >
+                        <mat-error
+                            *ngIf="loginForm.controls['email'].errors?.['required']"
+                            >*Email required</mat-error
+                        >
+                        <mat-error
+                            *ngIf="loginForm.controls['email'].errors?.['pattern']"
+                            >*Invalid Email</mat-error
+                        >
+                    </div>
+
+                    <div class="formGroup">
+                        <div class="example-container">
+                            <i class="fas fa-lock"></i>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter your password</mat-label>
+                                <input
+                                    matInput
+                                    type="password"
+                                    formControlName="password"
+                                    required
+                                />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div
+                        *ngIf="
+                            loginForm.controls['password'].invalid &&
+                            loginForm.controls['password'].touched
+                        "
+                    >
+                        <mat-error
+                            *ngIf="loginForm.controls['password'].errors?.['required']"
+                            >*Password required</mat-error
+                        >
+                    </div>
+                    <div class="bottom">
+                        <a href="#">Forgot Password?</a>
+                        <button
+                            [disabled]="loginForm.invalid"
+                            type="submit"
+                            class="btn"
+                        >
+                            Login
+                        </button>
+                        <span
+                            >New User?<a routerLink="/signup">Sign Up</a></span
+                        >
+                    </div>
+                    <div class="social-text">
+                        <p>Sign in with other accounts</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Krips Care</h3>
+            <p>
+              When you're facing a serious illness, we stand by your side. To
+              Explore more about us
+            </p>
+            <h4>Click Here</h4>
+            <button class="btn transparent">
+              <a routerLink="/home">Home</a>
+            </button>
+          </div>
+        </div>
+      </div> -->
+        </div>
+    </body>
+</html>

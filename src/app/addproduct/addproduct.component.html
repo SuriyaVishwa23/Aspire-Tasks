@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <header class="header">
+    <a routerLink="home" class="logo"
+      ><img src="assets/img/KRIPS hOSPITAL (1).png" width="160" height="100"
+    /></a>
+
+    <div class="menu">
+      <ul>
+        <li>
+          <a routerLink="/addproduct">Add Product</a>
+        </li>
+        <li>
+          <a routerLink="/skincare">Skin Care</a>
+        </li>
+        <li>
+          <a routerLink="/bodycare">Body Care</a>
+        </li>
+        <li>
+          <a routerLink="/beardcare">Beard Care</a>
+        </li>
+
+        <li>
+          <a routerLink="/about">About</a>
+        </li>
+        <button><a routerLink="/login">Login</a></button>
+      </ul>
+    </div>
+  </header>
+  <body>
+    <div class="container">
+      <div class="login-container">
+        <form [formGroup]="productForm" (ngSubmit)="addproduct()">
+          <h2>ADD PRODUCT</h2>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-user"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Product name</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="productname"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              productForm.controls['productname'].invalid &&
+              productForm.controls['productname'].touched
+            "
+          >
+            <mat-error
+              *ngIf="productForm.controls['productname'].errors?.['required']"
+              >*Username required</mat-error
+            >
+            <mat-error
+              *ngIf="productForm.controls['productname'].errors?.['pattern']"
+              >*Must contain at least one number and one uppercase and lowercase
+              letter, and at least 5 or more characters</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-envelope"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="productDescription"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              productForm.controls['productDescription'].invalid &&
+              productForm.controls['productDescription'].touched
+            "
+          >
+            <mat-error
+              *ngIf="productForm.controls['productDescription'].errors?.['required']"
+              >*Email required</mat-error
+            >
+            <mat-error
+              *ngIf="productForm.controls['productDescription'].errors?.['pattern']"
+              >*Invalid Email</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-phone"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Product Price</mat-label>
+                <input
+                  matInput
+                  type="number"
+                  formControlName="productPrice"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              productForm.controls['productPrice'].invalid &&
+              productForm.controls['productPrice'].touched
+            "
+          >
+            <mat-error
+              *ngIf="productForm.controls['productPrice'].errors?.['required']"
+              >*Mobile Number required</mat-error
+            >
+            <mat-error
+              *ngIf="productForm.controls['productPrice'].errors?.['pattern']"
+              >*Must contain 10 digit number</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-lock"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Discounted Price</mat-label>
+                <input
+                  matInput
+                  type="number"
+                  formControlName="discountedPrice"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              productForm.controls['discountedPrice'].invalid &&
+              productForm.controls['discountedPrice'].touched
+            "
+          >
+            <mat-error
+              *ngIf="productForm.controls['discountedPrice'].errors?.['required']"
+              >*Password required</mat-error
+            >
+            <mat-error
+              *ngIf="productForm.controls['discountedPrice'].errors?.['pattern']"
+              >*Must contain at least one number and one uppercase and lowercase
+              letter one special character $@&*# and at least 8 or more
+              characters</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-lock"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Rating</mat-label>
+                <input
+                  matInput
+                  type="number"
+                  formControlName="rating"
+                  required
+                  step="0.1"
+                  min="0"
+                  max="5"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              productForm.controls['rating'].invalid &&
+              productForm.controls['rating'].touched
+            "
+          >
+            <mat-error
+              *ngIf="productForm.controls['rating'].errors?.['required']"
+              >*Password required</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-lock"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Product Image Url</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="productImage"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              productForm.controls['productImage'].invalid &&
+              productForm.controls['productImage'].touched
+            "
+          >
+            <mat-error
+              *ngIf="productForm.controls['productImage'].errors?.['required']"
+              >*Password required</mat-error
+            >
+          </div>
+
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

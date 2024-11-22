@@ -1,0 +1,258 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-transform: capitalize;
+  transition: all .2s ease-out;
+  text-decoration: none;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+.header{
+  padding: 2rem 9%;
+  position:absolute;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1.5rem #16a085;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+
+}
+.header .logo{
+  float: left;
+  color: var(--black);
+}
+
+.menu{
+	display:inline-block;
+}
+.menu ul{
+	padding:0;
+	margin:0;
+}
+.menu ul li{
+	display: inline-block;
+	list-style-type:none;
+	margin: 0 20px;
+}
+.menu ul li a{
+	color:#444;
+	text-transform:capitalize;
+	font-weight:900;
+	font-size:16px;
+	letter-spacing:1px;
+	position:relative;
+}
+.menu ul li a::before{
+	content: '';
+	position:absolute;
+	background:#5ddd67;
+	width:0;
+	height:2px;
+	bottom:-5px;
+	left:0;
+	transition:0.2s ease-in-out;
+}
+.menu ul li a:hover::before{
+	width:100%;
+}
+/* product-card.component.css */
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width:250px;
+  height:500px;
+  padding: 16px;
+  text-align: center;
+  margin-top:7%;
+  box-shadow: 0 6px 10px blue;
+  margin-left:7rem;
+
+
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.product-title {
+  font-size: 17px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.product-rating {
+  margin-bottom: 12px;
+}
+
+.star {
+  color: #FFD700;
+  font-size: 20px;
+}
+
+.product-description {
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.product-discounted-price {
+  font-size: 14px;
+  color: #FF0000;
+}
+.add-to-cart-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0062cc;
+}
+
+.discounted-product-section {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  margin-top: 6%;
+}
+
+.discounted-product-section::before {
+  content: "FLASH SALE";
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  background-color: #e91e63;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+
+
+}
+.invisible {
+  display: none;
+}
+
+.discounted-product-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.discounted-product-container {
+  display: flex;
+  align-items: center;
+}
+
+.discounted-product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.discounted-product-details {
+  flex-grow: 1;
+}
+
+.discounted-product-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.discounted-product-description {
+  font-size: 15px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.discounted-product-price {
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 15px;
+  font-weight: bold;
+  color: #999;
+  margin-right: 10px;
+}
+
+.discounted-price {
+  color: #f00;
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+.sale-countdown {
+  font-size: 16px;
+  color: #f00;
+  margin-bottom: 10px;
+}
+
+.add-to-cart-button {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: #c00;
+}
+
+
+
+
+
+
+
+
+

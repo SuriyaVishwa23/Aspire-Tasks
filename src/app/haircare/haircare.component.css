@@ -1,0 +1,291 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-transform: capitalize;
+  transition: all .2s ease-out;
+  text-decoration: none;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+.header{
+  padding: 2rem 9%;
+  position:absolute;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+.header .logo{
+  float: left;
+  color: var(--black);
+}
+
+.menu{
+	display:inline-block;
+}
+.menu ul{
+	padding:0;
+	margin:0;
+}
+.menu ul li{
+	display: inline-block;
+	list-style-type:none;
+	margin: 0 20px;
+}
+.menu ul li a{
+	color:#444;
+	text-transform:capitalize;
+	font-weight:900;
+	font-size:16px;
+	letter-spacing:1px;
+	position:relative;
+}
+.menu ul li a::before{
+	content: '';
+	position:absolute;
+	background:#5ddd67;
+	width:0;
+	height:2px;
+	bottom:-5px;
+	left:0;
+	transition:0.2s ease-in-out;
+}
+.menu ul li a:hover::before{
+	width:100%;
+}
+.waveheader{
+  height:100%;
+  width:150%;
+  position: relative;
+  display: flex;
+  bottom: 0;
+}
+.waveheader h1{
+  font-size:6em;
+  color:white;
+  font-weight: 700;
+  margin-top: 8%;
+  margin-left: 15%;
+  z-index: 100;
+
+}
+.waveheader p{
+  font-size:3em;
+  color:white;
+  font-weight: 700;
+  margin-top: 12%;
+  margin-left: -15%;
+  z-index: 100;
+
+}
+.waveheader img{
+  position: relative;
+  float:left;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin-top: 8%;
+  margin-left: 13%;
+  padding: 5px;
+  width: 250px;
+  height:250px;
+  z-index:100;
+}
+
+svg{
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left:0;
+}
+.consult{
+  padding-bottom: 1.5rem;
+}
+.content h1{
+  font-size:4.5em;
+  color:black;
+  font-weight: 700;
+  margin-top: -13%;
+  margin-left: 10%;
+}
+.content p{
+  font-size:2.5em;
+  color:grey;
+  font-weight: 700;
+  margin-left: 10%;
+}
+.consult .box-container{
+  width:50%;
+  margin-left: 27%;
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(2.5em,1fr));
+  gap: 10rem;
+
+}
+.consult .box-container .box{
+  text-align: center;
+  background: #fff;
+  border-radius: .5rem;
+  border:4px solid black;
+
+  padding: 1.5rem;
+}
+.consult .box-container .box img{
+  height: 10rem;
+  border:4px solid black;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.btn{
+  display:inline-block;
+  padding:.5rem;
+  padding-left: 1rem;
+  border:.2rem solid black;
+  border-radius: .5rem;
+  box-shadow: .2rem .2rem 0 black;
+  color:black;
+  cursor: pointer;
+  font-size:1rem
+}
+.btn span{
+  padding:.7rem 1rem;
+  border-radius: .2rem;
+  background:black;
+  color:#fff;
+  margin-left:.5rem
+}
+.btn:hover {
+  background: black;
+  color: #fff;
+}
+.btn:hover span{
+  background: #fff;
+  color: black;
+  margin-left:1rem;
+}
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 30px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.step3 {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.step img {
+
+  width: 170px; /* Adjust the size as needed */
+  border: 4px solid black;
+  border-radius: 50%;
+  height:170px;
+}
+.step3 img {
+
+  width: 170px; /* Adjust the size as needed */
+  border: 4px solid black;
+  border-radius: 50%;
+  margin-top: 17%;
+  height:170px
+}
+hr.new4 {
+  border: 3px solid black;
+  width:300px;
+  margin-left:70%;
+  margin-top: -18%;
+}
+
+.stepperheading h1{
+  font-size:4.5em;
+  color:black;
+  font-weight: 700;
+  padding-top: 3rem;
+  margin-left: 10%;
+}
+.step1details h1{
+  font-size:2em;
+  color:black;
+  font-weight: 700;
+  padding-top: 40px;
+  margin-left: 8%;
+}
+.step2details h1{
+  font-size:2em;
+  color:black;
+  font-weight: 700;
+  margin-top: -4%;
+  margin-left: 40%;
+}
+.step3details h1{
+  font-size:2em;
+  color:black;
+  font-weight: 700;
+  margin-top: -4%;
+  margin-left: 73%;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 10%;
+
+  margin-top: 5%;
+  width: 200px;
+  height: 250px;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+
+
+
+}
+.cardheading h1{
+  font-size:4.5em;
+  color:black;
+  font-weight: 700;
+  padding-top: 7rem;
+  margin-left: 10%;
+}
+.cardheading span{
+  font-size:2.5em;
+  color:black;
+  font-weight: 700;
+  padding-top: 3rem;
+  margin-left: 10%;
+  bottom: 10rem;
+}
+
+
+

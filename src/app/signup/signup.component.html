@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="example-button">
+      <a mat-fab extended color="warn" routerLink="/login">
+        <mat-icon>arrow_back</mat-icon>
+        Back
+      </a>
+    </div>
+    <div class="example-button-row">
+      <a mat-fab extended color="primary" routerLink="/home">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+    </div>
+    <div class="container">
+      <div class="login-container">
+        <form [formGroup]="signupForm" (ngSubmit)="signup()">
+          <h2>SIGN UP</h2>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-user"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="username"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              signupForm.controls['username'].invalid &&
+              signupForm.controls['username'].touched
+            "
+          >
+            <mat-error
+              *ngIf="signupForm.controls['username'].errors?.['required']"
+              >*Username required</mat-error
+            >
+            <mat-error
+              *ngIf="signupForm.controls['username'].errors?.['pattern']"
+              >*Must contain at least one number and one uppercase and lowercase
+              letter, and at least 5 or more characters</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-envelope"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  type="email"
+                  placeholder="pat@example.com"
+                  formControlName="email"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              signupForm.controls['email'].invalid &&
+              signupForm.controls['email'].touched
+            "
+          >
+            <mat-error *ngIf="signupForm.controls['email'].errors?.['required']"
+              >*Email required</mat-error
+            >
+            <mat-error *ngIf="signupForm.controls['email'].errors?.['pattern']"
+              >*Invalid Email</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-phone"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Mobile Number</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="mobilenumber"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              signupForm.controls['mobilenumber'].invalid &&
+              signupForm.controls['mobilenumber'].touched
+            "
+          >
+            <mat-error
+              *ngIf="signupForm.controls['mobilenumber'].errors?.['required']"
+              >*Mobile Number required</mat-error
+            >
+            <mat-error
+              *ngIf="signupForm.controls['mobilenumber'].errors?.['pattern']"
+              >*Must contain 10 digit number</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-lock"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  type="password"
+                  formControlName="password"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              signupForm.controls['password'].invalid &&
+              signupForm.controls['password'].touched
+            "
+          >
+            <mat-error
+              *ngIf="signupForm.controls['password'].errors?.['required']"
+              >*Password required</mat-error
+            >
+            <mat-error
+              *ngIf="signupForm.controls['password'].errors?.['pattern']"
+              >*Must contain at least one number and one uppercase and lowercase
+              letter one special character $@&*# and at least 8 or more
+              characters</mat-error
+            >
+          </div>
+
+          <div class="formGroup">
+            <div class="example-container">
+              <i class="fas fa-lock"></i>
+              <mat-form-field appearance="fill">
+                <mat-label>Confirm Password</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  formControlName="cpassword"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              signupForm.controls['cpassword'].invalid &&
+              signupForm.controls['cpassword'].touched
+            "
+          >
+            <mat-error
+              *ngIf="signupForm.controls['cpassword'].errors?.['required']"
+              >*Password required</mat-error
+            >
+          </div>
+
+          <button class="btn">Submit</button>
+          <div class="bottom">
+            <span>Already a member?<a routerLink="/login">Login</a></span>
+          </div>
+        </form>
+      </div>
+      <div class="img">
+        <img src="assets/img/Signup2.png" />
+      </div>
+    </div>
+    <img class="wave" src="assets/img/waveright.png" />
+  </body>
+</html>

@@ -1,0 +1,473 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "username": "Suriya1",
+      "email": "suriya@gmail.com",
+      "mobilenumber": "9361454416",
+      "password": "Suriyavish@2",
+      "cpassword": "Suriyavish@2",
+      "id": 1
+    },
+    {
+      "username": "Sankar2",
+      "email": "sankar@gmail.com",
+      "mobilenumber": "9080605441",
+      "password": "Sankarlinga@1",
+      "cpassword": "Sankarlinga@1",
+      "id": 2
+    },
+    {
+      "username": "Admin1",
+      "email": "admin@ac.in",
+      "mobilenumber": "1234556787",
+      "password": "Admin@123",
+      "cpassword": "Admin@123",
+      "id": 3,
+      "isAdmin": true
+    }
+  ],
+  "products": [
+    {
+      "productname": "Stage 1 Hairloss Kit",
+      "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+      "productPrice": 1400,
+      "discountedPrice": 900,
+      "rating": 4,
+      "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+      "id": 1
+    },
+    {
+      "productname": "Beardmax Growth Serum (30 ml)",
+      "productDescription": "For Patchy Beard with 5% Minoxidil (alcohol-free)",
+      "productPrice": 600,
+      "discountedPrice": 450,
+      "rating": 3,
+      "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/11954287/3690-C1_e2d5n8.jpg?tr=w-800",
+      "id": 2
+    },
+    {
+      "productname": "Multivitamin Gummies (60N)",
+      "productDescription": "Immunity boosting gummies with 15 essential multivitamins",
+      "productPrice": 700,
+      "discountedPrice": 600,
+      "rating": 4,
+      "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/13410495/Untitled%20design%20%289%29_a4qovu.png?tr=w-800",
+      "id": 3
+    },
+    {
+      "productname": "Anti-Dandruff Shampoo (100 ml)",
+      "productDescription": "1% Ketoconazole Shampoo For Dandruff & Itchy Scalp (100 ml)",
+      "productPrice": 300,
+      "discountedPrice": null,
+      "rating": 4.5,
+      "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/1144207/CR_2677_1000x1000---1_XeJWcsnOG.jpg?tr=w-800",
+      "id": 4
+    },
+    {
+      "productname": "Anti Hair Fall Shampoo (200ml)",
+      "productDescription": "With Caffeine, Biotin & Argan Oil DHT Blocking Shampoo",
+      "productPrice": 400,
+      "discountedPrice": 350,
+      "rating": 5,
+      "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/1596/1__4__qbBiC1_3G.jpg?tr=w-800",
+      "id": 5
+    },
+    {
+      "productname": "REJUV Under Eye Cream",
+      "productDescription": "Dark Circle Removal with Niacinamide",
+      "productPrice": 500,
+      "discountedPrice": 350,
+      "rating": 4.6,
+      "productImage": "https://i.mscwlns.co/media/misc/pdp/5369912/Under-Eye-Cream_600X600_-with-ingredients__1__PuvMG_xy4.png?tr=w-800",
+      "id": 6
+    },
+    {
+      "productname": "Salicylic Acid + LHA 02% Face Cleanser",
+      "productDescription": "Reduces Sebum & Prevents Breakout Without Drying Skin",
+      "productPrice": 300,
+      "discountedPrice": 235,
+      "rating": 4,
+      "productImage": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/18-min_1728x.png?v=1679317872",
+      "id": 7
+    },
+    {
+      "productname": "SPF 50 Sunscreen",
+      "productDescription": "Broad Spectrum SPF 50, PA++++  A light weight, moisturiser-meets-sunscreen",
+      "productPrice": 450,
+      "discountedPrice": 380,
+      "rating": 4,
+      "productImage": "https://cdn.shopify.com/s/files/1/0410/9608/5665/products/spf-50-1200--1min-1646515553741_1728x.webp?v=1651485996",
+      "id": 8
+    },
+    {
+      "productname": "Men's Face Wash for Oily Skin",
+      "productDescription": "for oily skin enriched with 1% Salicylic Acid and 1% Glycolic Acid.",
+      "productPrice": 500,
+      "discountedPrice": 349,
+      "rating": 4,
+      "productImage": "https://i.mscwlns.co/mosaic-wellness/image/upload/v1642668773/New%20hero%20images/CLEAN-Oil-Control-Face-Wash.png?tr=w-800",
+      "id": 9
+    }
+  ],
+  "discountedproducts": [],
+  "cart": [
+    {
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 2
+        }
+      ],
+      "id": 3
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 3
+        }
+      ],
+      "id": 4
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 2
+        }
+      ],
+      "id": 5
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 6
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 7
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 2
+        }
+      ],
+      "id": 9
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 3
+        }
+      ],
+      "id": 10
+    },
+    {
+      "0": {
+        "1": [
+          {
+            "productname": "Stage 1 Hairloss Kit",
+            "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+            "productPrice": 1400,
+            "discountedPrice": 900,
+            "rating": 4,
+            "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+            "id": 1,
+            "quantity": 1
+          }
+        ],
+        "id": 1
+      },
+      "1": [
+        {
+          "productname": "Stage 1 Hairloss Kit",
+          "productDescription": "fOR HAIR REGROWTH WITH hair Serum and Gummies",
+          "productPrice": 1400,
+          "discountedPrice": 900,
+          "rating": 4,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/26166961/new%20-min_5pbihf.jpg?tr=w-500",
+          "id": 1,
+          "quantity": 3
+        }
+      ],
+      "2": [
+        {
+          "productname": "Beardmax Growth Serum (30 ml)",
+          "productDescription": "For Patchy Beard with 5% Minoxidil (alcohol-free)",
+          "productPrice": 600,
+          "discountedPrice": 450,
+          "rating": 3,
+          "productImage": "https://i.mscwlns.co/media/misc/pdp_rcl/11954287/3690-C1_e2d5n8.jpg?tr=w-800",
+          "id": 2,
+          "quantity": 1
+        }
+      ],
+      "id": 11
+    }
+  ],
+  "appointments": [
+
+    {
+      "userName": "Suriya1",
+      "doctor": "Dr. Smith",
+      "date": "2023-06-28",
+      "time": "12:31",
+      "problems": {
+        "Hair Loss": true,
+        "Dandruff": true
+      },
+      "id": 6
+    }
+  ]
+}

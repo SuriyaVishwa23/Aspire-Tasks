@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div><app-header></app-header></div>
+    <section class="home" id="home">
+      <div class="image">
+        <img src="assets/img/Hospital bed.gif" />
+      </div>
+
+      <div class="content">
+        <div *ngIf="loggedIn">
+          <h2>Welcome, {{ username }}!</h2>
+        </div>
+        <h1>KRIPS CARE</h1>
+        <h3>Adding Care to Your Life..</h3>
+        <p>
+          Krips Care defines quality as a comprehensive look at all aspects of a
+          patient's experience. Krips care patients seek excellence in care,
+          medical knowledge, experience and technology.Quality at Krips Care
+          involves the totality of a patient's experience, from the first phone
+          call to the last appointment.
+        </p>
+      </div>
+    </section>
+
+    <section class="icons-container">
+      <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>100+</h3>
+        <p>Doctors at Work</p>
+      </div>
+
+      <div class="icons">
+        <i class="fas fa-users"></i>
+        <h3>1040+</h3>
+        <p>Satisfied Patients</p>
+      </div>
+
+      <div class="icons">
+        <i class="fas fa-procedures"></i>
+        <h3>400+</h3>
+        <p>Bed Facilities</p>
+      </div>
+
+      <div class="icons">
+        <i class="fas fa-ambulance"></i>
+        <h3>20+</h3>
+        <p>Ambulance Available</p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h1 class="heading"><span>About</span>Us</h1>
+
+      <div class="row">
+        <div class="image">
+          <img src="assets/img/About Us.png" alt="" />
+        </div>
+
+        <div class="content">
+          <h3>We take care of Your Healthy Life</h3>
+          <p>
+            Krips Care's mission is to inspire hope and contribute to health and
+            well-being by providing the best care to every patient through
+            integrated clinical practice, education and research. Our primary
+            value is "The needs of the patient come first."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h1 class="heading">OUR <span>SERVICES</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-notes-medical"></i>
+          <h3>Hair Care</h3>
+          <p>
+            Provide the best care, treating patients and family members with
+            sensitivity and empathy.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-ambulance"></i>
+          <h3>Skin Care</h3>
+          <p>
+            We will be available for 24 hrs and also provide ambulance services.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-user-md"></i>
+          <h3>Body care</h3>
+          <p>
+            We will be available for 24 hrs and also provide ambulance services.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-pills"></i>
+          <h3>Beard Care</h3>
+          <p>
+            We will be available for 24 hrs and also provide ambulance services.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-procedures"></i>
+          <h3>Expert Doctors</h3>
+          <p>
+            We will be available for 24 hrs and also provide ambulance services.
+          </p>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Best Care</h3>
+          <p>
+            We will be available for 24 hrs and also provide ambulance services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doctors" id="doctors">
+      <h1 class="heading">Our<span>Doctors</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="assets/img/DOC1.jpg" width="200" alt="" />
+          <h3>Dr.Durga</h3>
+          <span>Child Specialist</span>
+          <div class="share">
+            <a routerLink="#" class="fab fa-facebook-f"></a>
+            <a routerLink="#" class="fab fa-twitter"></a>
+            <a routerLink="#" class="fab fa-instagram"></a>
+            <a routerLink="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="assets/img/DOCTOR7.jpg" width="200" alt="" />
+          <h3>Dr.Durga</h3>
+          <span>Child Specialist</span>
+          <div class="share">
+            <a routerLink="#" class="fab fa-facebook-f"></a>
+            <a routerLink="#" class="fab fa-twitter"></a>
+            <a routerLink="#" class="fab fa-instagram"></a>
+            <a routerLink="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="assets/img/DOCTOR3.jpg" width="200" alt="" />
+          <h3>Dr.Durga</h3>
+          <span>Child Specialist</span>
+          <div class="share">
+            <a routerLink="#" class="fab fa-facebook-f"></a>
+            <a routerLink="#" class="fab fa-twitter"></a>
+            <a routerLink="#" class="fab fa-instagram"></a>
+            <a routerLink="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="assets/img/Doctor4.jpg" width="200" alt="" />
+          <h3>Dr.Krubha</h3>
+          <span>Child Specialist</span>
+          <div class="share">
+            <a routerLink="#" class="fab fa-facebook-f"></a>
+            <a routerLink="#" class="fab fa-twitter"></a>
+            <a routerLink="#" class="fab fa-instagram"></a>
+            <a routerLink="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="assets/img/dOCTOR5.jpg" width="200" alt="" />
+          <h3>Dr.Sankar</h3>
+          <span>Cheif Doctor</span>
+          <div class="share">
+            <a routerLink="#" class="fab fa-facebook-f"></a>
+            <a routerLink="#" class="fab fa-twitter"></a>
+            <a routerLink="#" class="fab fa-instagram"></a>
+            <a routerLink="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="assets/img/DOCTOR6.jpeg" width="200" alt="" />
+          <h3>Dr.Shiva</h3>
+          <span>Cardiologist</span>
+          <div class="share">
+            <a routerLink="#" class="fab fa-facebook-f"></a>
+            <a routerLink="#" class="fab fa-twitter"></a>
+            <a routerLink="#" class="fab fa-instagram"></a>
+            <a routerLink="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="assets/img/DOC2.jpg" width="200" alt="" />
+          <h3>Dr.Partha</h3>
+          <span>Neurologist</span>
+          <div class="share">
+            <a routerLink="#" class="fab fa-facebook-f"></a>
+            <a routerLink="#" class="fab fa-twitter"></a>
+            <a routerLink="#" class="fab fa-instagram"></a>
+            <a routerLink="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="assets/img/DOCTOR8.jpg" width="200" alt="" />
+          <h3>Dr.Santhip</h3>
+          <span>Nephrologist</span>
+          <div class="share">
+            <a routerLink="#" class="fab fa-facebook-f"></a>
+            <a routerLink="#" class="fab fa-twitter"></a>
+            <a routerLink="#" class="fab fa-instagram"></a>
+            <a routerLink="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="box-container">
+        <div class="footer-img">
+          <img src="assets/img/KRIPS hOSPITAL.png" width="160" height="100" />
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a routerLink="home"><i class="fas fa-chevron-right"></i>Home</a>
+          <a routerLink="home"><i class="fas fa-chevron-right"></i>Products</a>
+          <a routerLink="home"><i class="fas fa-chevron-right"></i>About</a>
+        </div>
+
+        <div class="box">
+          <h3>Our Services</h3>
+          <a routerLink="home"><i class="fas fa-chevron-right"></i>Hair Care</a>
+          <a routerLink="home"><i class="fas fa-chevron-right"></i>Skin Care</a>
+          <a routerLink="home"><i class="fas fa-chevron-right"></i>Body Care</a>
+          <a routerLink="home"
+            ><i class="fas fa-chevron-right"></i>Beard Care</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>Contact Info</h3>
+          <a routerLink="home"><i class="fas fa-phone"></i>+91-90805-90805 </a>
+          <a routerLink="home"><i class="fas fa-phone"></i>+91-95788-95788 </a>
+          <a routerLink="home"
+            ><i class="fas fa-envelope"></i>kripscare@gamil.com</a
+          >
+          <a routerLink="home"
+            ><i class="fas fa-envelope"></i>krips01@gamil.com</a
+          >
+          <a routerLink="home"
+            ><i class="fas fa-map-marker-alt"></i>Chennai, India - 400104</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>Follow Us</h3>
+          <a routerLink="home"><i class="fab fa-facebook-f"></i>Facebook</a>
+          <a routerLink="home"><i class="fab fa-twitter"></i>Twitter</a>
+          <a routerLink="home"><i class="fab fa-instagram"></i>Instagram</a>
+          <a routerLink="home"><i class="fab fa-linkedin"></i>Linkedin</a>
+          <a routerLink="home"><i class="fab fa-pinterest"></i>Pinterest</a>
+        </div>
+      </div>
+
+      <div class="credit">
+        Created by <span>Krips Care</span>| All Rights reserved
+      </div>
+    </footer>
+  </body>
+</html>

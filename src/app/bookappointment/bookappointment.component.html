@@ -1,0 +1,173 @@
+<div>
+    <button mat-button class="back-button" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+        Back
+    </button>
+</div>
+<div class="heading"><h2>Book Your Appointment</h2></div>
+<div>
+    <button mat-button class="home-button" routerLink="/home">
+        <mat-icon>home</mat-icon>
+        Home
+    </button>
+</div>
+<div class="container">
+    <div class="stepper">
+        <mat-horizontal-stepper linear [selectedIndex]="showNextStep ? 1 : 0">
+            <mat-step>
+                <ng-template matStepLabel
+                    >{{ careType }} Appointment</ng-template
+                >
+                <div *ngFor="let problem of problems">
+                    <mat-checkbox
+                        [(ngModel)]="selectedProblems[problem]"
+                        [value]="problem"
+                    >
+                        {{ problem }}
+                    </mat-checkbox>
+                </div>
+                <button mat-button matStepperNext *ngIf="!showNextStep">
+                    Next
+                </button>
+            </mat-step>
+
+            <mat-step>
+                <ng-template matStepLabel
+                    >Select Doctor, Date, and Time</ng-template
+                >
+                <form
+                    [formGroup]="appointmentForm"
+                    (ngSubmit)="submitAppointment()"
+                >
+                    <mat-form-field>
+                        <mat-label>Doctor</mat-label>
+                        <mat-select formControlName="selectedDoctor">
+                            <mat-option value="">Select a doctor</mat-option>
+                            <mat-option
+                                *ngFor="let doctor of doctors"
+                                [value]="doctor"
+                            >
+                                {{ doctor }}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="
+                                appointmentForm.get('selectedDoctor')
+                                    ?.invalid &&
+                                appointmentForm.get('selectedDoctor')?.touched
+                            "
+                        >
+                            Doctor is required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Age</mat-label>
+                        <input
+                            type="number"
+                            matInput
+                            formControlName="selectedAge"
+                        />
+                        <mat-error
+                            *ngIf="
+                                appointmentForm.get('selectedAge')?.invalid &&
+                                appointmentForm.get('selectedAge')?.touched
+                            "
+                        >
+                            <span
+                                *ngIf="appointmentForm.get('selectedAge')?.errors?.['required']"
+                            >
+                                Age is required.
+                            </span>
+                            <span
+                                *ngIf="appointmentForm.get('selectedAge')?.errors?.['min']"
+                            >
+                                Age must be at least 18.
+                            </span>
+                            <span
+                                *ngIf="appointmentForm.get('selectedAge')?.errors?.['max']"
+                            >
+                                Age must be at most 99.
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Date</mat-label>
+                        <input
+                            matInput
+                            [matDatepicker]="datePicker"
+                            formControlName="selectedDate"
+                        />
+                        <mat-datepicker-toggle
+                            matSuffix
+                            [for]="datePicker"
+                        ></mat-datepicker-toggle>
+                        <mat-datepicker #datePicker></mat-datepicker>
+                        <mat-error
+                            *ngIf="
+                                appointmentForm.get('selectedDate')?.invalid &&
+                                appointmentForm.get('selectedDate')?.touched
+                            "
+                        >
+                            <span
+                                *ngIf="appointmentForm.get('selectedDate')?.errors?.['required']"
+                                >Date is required.</span
+                            >
+                            <span
+                                *ngIf="appointmentForm.get('selectedDate')?.errors?.['matDatepickerParse']"
+                                >Invalid date format.</span
+                            >
+                            <span
+                                *ngIf="appointmentForm.get('selectedDate')?.errors?.['matDatepickerMax']"
+                                >Invalid date. Date should be chosen from today
+                                onwards.</span
+                            >
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Time</mat-label>
+                        <input
+                            type="time"
+                            matInput
+                            formControlName="selectedTime"
+                        />
+
+                        <mat-error
+                            *ngIf="
+                                appointmentForm.get('selectedTime')?.invalid &&
+                                appointmentForm.get('selectedTime')?.touched
+                            "
+                        >
+                            <span
+                                *ngIf="appointmentForm.get('selectedTime')?.errors?.['required']"
+                            >
+                                Time is required.
+                            </span>
+                            <span
+                                *ngIf="appointmentForm.get('selectedTime')?.errors?.['pattern']"
+                            >
+                                Invalid time format.
+                            </span>
+                            <span
+                                *ngIf="appointmentForm.get('selectedTime')?.errors?.['invalidTimeRange']"
+                            >
+                                Time must be between 9:00 AM and 10:00 PM.
+                            </span>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <button
+                        mat-raised-button
+                        color="primary"
+                        type="submit"
+                        [disabled]="appointmentForm.invalid"
+                    >
+                        Submit Appointment
+                    </button>
+                </form>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+</div>
